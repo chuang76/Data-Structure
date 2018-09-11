@@ -1,5 +1,5 @@
-// Generate a array randomly
-// then use selection sort to transform the array into an ordered list
+// Generate an array randomly
+// use selection sort to transform the array into an ordered list
 // use binary search to search the number which you want, return the index of the number
 
 #include<stdio.h>
