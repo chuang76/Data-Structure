@@ -76,7 +76,7 @@ void Max()
 		for(j = 1; j < 16; j++)
 			for(k = 0; k < count; k++)
 				if(b[i][j] == c[k])
-					sum[k] += a[i][j];
+					sum[k] += a[i][j];		
 }
 
 void connect()
@@ -110,22 +110,11 @@ void connect()
 		m[arr[i][1]][arr[i][0]] = 1;
 	}
 	
-	for(i = 0; i < 15; i++)
-	{
-		for(j = 0; j < 15; j++)
-		{
-			if(m[i][j] == 1)			// connect to each other
-				m[j][i] = 1;
-			if(m[j][i] == 1)
-				m[i][j] = 1;
-		}
-	}
-
 	int max = sum[0], index = 1;			// to add up and compare
-	for(i = 1; i < count; i++)
+	for(i = 1; i <= count; i++)
 	{
 		int temp = sum[i-1]; 
-		for(j = 1; j < count; j++)
+		for(j = 1; j <= count; j++)
 		{
 			if(m[i][j] == 1 && i!= j)
 				sum[i-1] = sum[i-1] + sum[j-1];			// i is the main lake, j is the additional lake
