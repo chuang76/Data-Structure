@@ -1,7 +1,7 @@
 // 因為c/c++不能傳遞二維陣列, 所以用struct包起來傳 
 #include<stdio.h>
 #include<stdlib.h>
-#define MAX 100
+#define MAX 10
 
 typedef struct coordinate
 {
@@ -22,7 +22,7 @@ int main(void)
 	{
 		int a, b;
 		coo c1;
-		printf("Enter the numbers: ");
+		printf("Enter the coordinates: ");
 		scanf("%d %d", &a, &b);
 		c1.x = a;
 		c1.y = b;
@@ -66,7 +66,7 @@ coo pop()
 		printf("堆疊已空\n");
 	else
 	{
-		c2 = stack[top];
+		c2 = stack[top];		// 取出來 
 		top--;
 		return c2;
 	}
