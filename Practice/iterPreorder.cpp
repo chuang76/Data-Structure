@@ -1,9 +1,3 @@
-/* binary tree is 
-		 1
-	  2    3
-    4  5  6
-*/
-
 #include<iostream>
 #include<stack>
 
