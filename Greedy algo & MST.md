@@ -137,6 +137,7 @@
     $$
     w(T') ≦ w(T^* / e)
     $$
+  
     $$
     w(T') + w(e) ≦ w(T^*/ e) + w(e) = w(T^*)
     $$
@@ -174,9 +175,11 @@
       3. (T* - e' ∪ e) is spanning tree (if we remove e', does it will be disconnected? don't worry! we have added e, so it is still a spanning tree, then we need to do is to prove it is minimum)
 
       4. consider the weight of T* - e' ∪ e, and by definition, e is a least weight edge crossing cut, so w(e') ≦ w(e), we can get
+      
          $$
          w(T^* - e'  \cup \{e\}) = w(T^*) - w(e') + w(e)≦ w(T^*)
          $$
+         
          So we know w(T* - e' ∪ e) is less than or equal to the w(T*), which is optimal weight (minimum weight)
 
          Thus we can conclude that (T* - e' ∪ e) is actually MST of G (and it includes our edge e!) 
@@ -185,7 +188,7 @@
 
          
 
-- [思考 :cloud:] : 把 lemma 2 合到 lemma 1 , 我們就可以不用 random 挑 edge 啦 , 藉由 polynomial 的 running time 就可以得出 MST 了
+- [思考:cloud:] : 把 lemma 2 合到 lemma 1 , 我們就可以不用 random 挑 edge 啦 , 藉由 polynomial 的 running time 就可以得出 MST 了
 
 - 接下來我們就要用上述兩個 lemma 來建立 algorithm 
 
@@ -193,7 +196,7 @@
 
 ## Prim's algo
 
-- [思考 :cloud:] : 跟 Dijkstra 有點像 , 想法是 choose cut
+- [思考:cloud:] : 跟 Dijkstra 有點像 , 想法是 choose cut
 
   - we're going to start out with an obvious cut, which is a single vertex
 
@@ -237,11 +240,15 @@
 
        - so when you end up extracting a vertex, you're already figured out which edge you added to put into the set
 
-       - [思考 :cloud:] 
+       - [思考:cloud:] 
 
          - why we consider vertex v ? can we consider vertex u and choose the least weight edge from u to v ? (it's same thing :laughing:)
 
-         - prim's algo 的角度是 vertex , 藉由 neighbor 從 queue 裡面選出新的 vertex , 並從兩個 vertices 中選出 weight 最少的邊 ,  接下來考慮新的 vertex , 不斷地做 iteration , 直到所有 vertices 都被選完 (此時 queue 為 empty) , 我們即產生 MST
+         - prim's algo 的角度是 vertex , 藉由 neighbor 從 queue 裡面選出新的 vertex , 
+
+           並從兩個 vertices 中選出 weight 最少的邊 ,  接下來考慮新的 vertex , 不斷地做 iteration , 
+
+           直到所有 vertices 都被選完 (此時 queue 為 empty) , 我們即產生 MST
 
            
 
@@ -261,7 +268,7 @@
 
 - Correctness
 
-  - Reference : [loop invariant](https://zh.wikipedia.org/wiki/%E5%BE%AA%E7%8E%AF%E4%B8%8D%E5%8F%98%E9%87%8F "link) (類似歸納法)
+  - Reference : loop invariant (類似歸納法)
 
   - the key value of every vertex always remains the minimum ?
 
