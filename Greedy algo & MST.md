@@ -134,13 +134,10 @@
     Let T* is a MST of G contains edge e, then T*/e is a spanning tree of G/e = G'
 
     By definition, T' is a MST of G/e = G', thus the total weight of T' is less than or equal to T*/e, means
-    $$
-    w(T') ≦ w(T^* / e)
-    $$
-  
-    $$
-    w(T') + w(e) ≦ w(T^*/ e) + w(e) = w(T^*)
-    $$
+
+    ​	  w(T') ≦ w(T* / e)
+
+    ​	  w(T') + w(e) ≦ w(T* / e) + w(e) = w(T*)
 
     Thus we can get T' ∪ {e} is an MST of G !
 
@@ -172,14 +169,14 @@
 
       2. so there must be a an edge e' ∈ MST crossing the cut (then we can start to cut & paste!)
 
-      3. (T* - e' ∪ e) is spanning tree (if we remove e', does it will be disconnected? don't worry! we have added e, so it is still a spanning tree, then we need to do is to prove it is minimum)
+      3. (T* - e' ∪ e) is spanning tree (if we remove e', does it will be disconnected? 
 
-      4. consider the weight of T* - e' ∪ e, and by definition, e is a least weight edge crossing cut, so w(e') ≦ w(e), we can get
-      
-         $$
-         w(T^* - e'  \cup \{e\}) = w(T^*) - w(e') + w(e)≦ w(T^*)
-         $$
-         
+         don't worry! we have added e, so it is still a spanning tree, then we need to do is to prove it is minimum)
+
+      4. consider the weight of T* - e' ∪ e, and by definition, e is a least weight edge crossing cut, 
+
+         so w(e') ≦ w(e), we can get  w(T* - e' ∪ {e}) = w(T* ) - w(e') + w(e) ≦ w(T*)
+
          So we know w(T* - e' ∪ e) is less than or equal to the w(T*), which is optimal weight (minimum weight)
 
          Thus we can conclude that (T* - e' ∪ e) is actually MST of G (and it includes our edge e!) 
