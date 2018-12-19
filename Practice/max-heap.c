@@ -19,13 +19,13 @@ int count = 0;
 void HeapFull()
 {
 	printf("The heap is full.\n");
-	exit(1);
+	exit(0);
 }
 
 void HeapEmpty()
 {
 	printf("The heap is empty.\n");
-	exit(1);
+	exit(0);
 }
 
 void swap(node *i, node *j)
