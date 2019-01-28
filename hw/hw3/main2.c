@@ -1,5 +1,5 @@
 /*	 
- *	Title: Complete binary tree
+ *  Title: Complete binary tree
  *  Idea: Use the properties of CBT to solve the problem 
  *  Date: Dec, 2018
  */

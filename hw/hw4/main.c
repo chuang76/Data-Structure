@@ -1,6 +1,6 @@
 /* 
  *   Title : Knight Problem
- *	 Date : Dec, 2018
+ *   Date : Dec, 2018
  */
 #include<stdio.h>
 #include<stdlib.h>

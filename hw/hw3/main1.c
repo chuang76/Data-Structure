@@ -1,7 +1,7 @@
 /*	 
- *	Title: Huffman coding for text files
+ *  Title: Huffman coding for text files
  *  Idea: 1) build a huffman tree from input characters
- *	      2) traverse the huffman tree and assign codes to characters
+ *        2) traverse the huffman tree and assign codes to characters
  *  Date: Dec, 2018
  */
  
@@ -13,8 +13,8 @@ typedef struct node
 {
 	char data;
 	int freq;
-	int en;					// encoding size
-	int arr[10];			// encoding table
+	int en;             // encoding size
+	int arr[10];		// encoding table
 	struct node *next, *left, *right;
 }node;
 
@@ -46,7 +46,7 @@ heap* newHeap(int capacity)					// utility function to create a new heap
 {
 	heap *h = malloc(sizeof(heap));
 	h->capacity = capacity;
-	h->size = 0;										// size is equal to 0 at the initial state
+	h->size = 0;							// size is equal to 0 at the initial state
 	h->arr = malloc(sizeof(node) * h->capacity);		// create space to accommodate nodes
 	return h;
 }
