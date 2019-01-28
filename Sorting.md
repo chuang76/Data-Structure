@@ -20,7 +20,9 @@
     
     - computer graphics : rendering scenes front to back
 
+<br>
 
+<br>
 
 ## Insertion sort
 
@@ -44,20 +46,34 @@
 - analysis
 
   - how many steps do I have ?
-  
+
     - Θ(n) steps 
-    
+
     - and at any given step, it's quite possible that I have to do Θ(n) to work
-    
+
     - so each step is Θ(n) swaps (compare & swap)
-    
+
   - compare & swap
-  
+
     - swapping pointers or references to do the swap
-    
+
     - but comparision could be substantially more expensive
 
+  - suppose compares >> swaps
 
+    - compare with middle
+
+    - pairwise swaps → binary search
+
+    - do a binary search on A[0:i-1] already sorted
+
+    - example
+
+      ![](https://www.codingeek.com/wp-content/uploads/2016/06/Insertion-Sort-and-its-implementation.png)
+
+<br>
+
+<br>
 
 ## Selection sort
 
@@ -85,7 +101,9 @@
 
   ![](https://freefeast.info/wp-content/uploads//2013/02/Insertion-Sort.jpg)
 
+<br>
 
+<br>
 
 ## Bubble sort
 
@@ -109,4 +127,117 @@
 - example
 
   ![](https://developersadda.files.wordpress.com/2016/08/c34ba-java2bbubble2bsort2bexample.png?w=640&h=316)
+
+<br>
+
+<br>
+
+## Merge Sort
+
+- idea
+
+  - divide & conquer
+
+  - 拆成兩個小的 array , 分別 sort 完做 merge
+
+  - 感受一下
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/c/c5/Merge_sort_animation2.gif)
+
+- pseudo code
+
+  ```
+  Merge(L, R, A)
+  {
+      nL ← length(L)
+      nR ← length(R)
+      
+  }
+  ```
+
+  
+
+- example
+
+  ![](https://i0.wp.com/kopu.chat/wp-content/uploads/2017/08/merge.gif?fit=476%2C191&ssl=1)
+
+<br>
+
+<br>
+
+## Quick Sort
+
+- idea
+
+  - 隨機找一個數當 pivot , 把小於它的放左邊 , 大於它的放右邊 (partition) , 並利用遞迴將子數列做排序
+
+  - 感受一下
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Quicksort.gif)
+
+- psuedo code
+
+  ```
+  QuickSort(A, start, end)   # use index so that we don't need extra memory
+  {
+      if(start < end)
+      	pIndex ← Partition(A, start, end)    # pivot 的 index
+      	QuickSort(A, start, pIndex-1)		# 左邊的子數列
+      	QuickSort(A, pIndex+1, end)			# 右邊的子數列
+  }
+      
+  Partition(A, start, end)
+  {
+      pivot ← A[end]			# 假設選最右邊當 pivot
+  	pIndex ← start
+  	for i ← start to end-1
+  		if(A[i] <= pivot)
+  			swap(A[i], A[pIndex])    # index 往右移
+  			pIndex ← pIndex+1   	 # 值也要跟著變
+  	swap(A[pIndex], A[end])			 # 完成了
+      return pIndex          	# 回傳 pivot 的 index
+  }
+  ```
+
+- example
+
+  ![](https://camo.githubusercontent.com/bfb739ea1469b2965f6ea6cad9a2acc9c850d6cb/68747470733a2f2f69322e77702e636f6d2f7777772e74656368696564656c696768742e636f6d2f77702d636f6e74656e742f75706c6f6164732f517569636b736f72742e706e673f773d313130302673736c3d31)
+
+- Analysis
+
+  - Divide & conquer
+  
+  - Recursive
+  
+  - Not stable 
+  
+    - partitioning logic in quick sort algo does not ensure stability
+    
+  - Time complexity
+  
+    - O(nlogn) : best or average case (balanced partition)
+    
+    - O(n<sup>2</sup>) : worst case (by using randomized version can be avoided)
+
+- Reference
+
+  - [MIT 6.006]
+  
+  - [mycodeschool]
+
+
+<br>
+
+<br>
+
+## Heap Sort
+
+- idea
+- example
+
+<br>
+
+<br>
+
+## Radix Sort
 

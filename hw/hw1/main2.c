@@ -11,7 +11,7 @@ void connect();
 int main(void)
 {
 	FILE *fp;
-	fp = fopen("input.txt","r");			// read the file only by pointer
+	fp = fopen("input1.txt","r");			// read the file only by pointer
 	
 	int i, j;	 
 	char c;		
@@ -87,7 +87,7 @@ void connect()
 	{
 		if(b[i][1] != 0 && b[i][15] != 0) 		// b[i][1] is connected with b[i][15]
 		{
-			arr[x][0] = b[i][1];		 
+			arr[x][0] = b[i][1];		 // record which lake it is
 			arr[x][1] = b[i][15];
 			x++;
 		}

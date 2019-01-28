@@ -10,7 +10,7 @@ void Max();
 int main(void)
 {
 	FILE *fp;
-	fp = fopen("input.txt","r");			// read the file only by pointer
+	fp = fopen("input1.txt","r");			// read the file only by pointer
 	
 	int i, j;	 
 	char c;		
@@ -29,13 +29,13 @@ int main(void)
 		for(j = 0; j < 15; j++)
 			a[i+1][j+1] = org[i][j];
 	
-	printf("Original Lake\n");				// print the map of original lake 
-	for(i = 1; i < 16; i++)
-	{
-		for(j = 1; j < 16; j++)
-			printf("%3d", a[i][j]);
-		printf("\n");
-	}
+//	printf("Original Lake\n");				// print the map of original lake 
+//	for(i = 1; i < 16; i++)
+//	{
+//		for(j = 1; j < 16; j++)
+//			printf("%3d", a[i][j]);
+//		printf("\n");
+//	}
 	
 	for(i = 1; i < 16; i++)
 	{
@@ -49,8 +49,16 @@ int main(void)
 			}
 		}
 	}
+	
+//	printf("¼Ð¤W½s¸¹\n"); 
+//	for(int i = 1; i < 16; i++)
+//	{
+//		for(int j = 1; j < 16; j++)
+//			printf("%3d", b[i][j]);
+//		printf("\n");
+//	}
 		
-	printf("\nResult Lake\n");
+//	printf("\nResult Lake\n");
 	Max();
 	
 	system("pause");
@@ -85,6 +93,11 @@ void Max()
 				if(b[i][j] == c[k])
 					sum[k] += a[i][j];
 	
+	for(int i = 0; i < count; i++)
+	{
+		printf("sum[%d] = %d\n", i, sum[i]);
+	}
+	
 	int max = sum[0], index = 0;			// compare
 	for(i = 0; i < count; i++)
 	{
@@ -107,13 +120,13 @@ void Max()
 		}
 		printf("\n");
 	}
-	
+//	
 	printf("\nThe coordinates of the largest lake\n");		// print the coordinates
 	for(i = 1; i < 16; i++)
 		for(j = 1; j < 16; j++)
 			if(b[i][j] == index)
 				printf("(%d,%d)\n", i-1, j-1);
-	
-	printf("\nThe volume of the largest lake is %d\n", max);		// print the volume
+//	
+//	printf("\nThe volume of the largest lake is %d\n", max);		// print the volume
 }
 
