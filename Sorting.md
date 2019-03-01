@@ -144,19 +144,6 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/c/c5/Merge_sort_animation2.gif)
 
-- pseudo code
-
-  ```
-  Merge(L, R, A)
-  {
-      nL ← length(L)
-      nR ← length(R)
-      
-  }
-  ```
-
-  
-
 - example
 
   ![](https://i0.wp.com/kopu.chat/wp-content/uploads/2017/08/merge.gif?fit=476%2C191&ssl=1)
@@ -219,25 +206,7 @@
     
     - O(n<sup>2</sup>) : worst case (by using randomized version can be avoided)
 
-- Reference
-
-  - [MIT 6.006]
-  
-  - [mycodeschool]
-
-
 <br>
 
 <br>
-
-## Heap Sort
-
-- idea
-- example
-
-<br>
-
-<br>
-
-## Radix Sort
 
