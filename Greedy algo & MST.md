@@ -16,9 +16,7 @@
 
   - greedy algo repeatedly makes <u>locally best</u> choice/decision, ignoring effect on future
 
-    ![](https://pbs.twimg.com/profile_images/552145045663408129/egywNuyx_400x400.png)
-
-  - like cookie monster, repeatedly eat another cookie :cookie: (but maybe it will bite you in the future)
+  - like cookie monster, repeatedly eat another cookie (but maybe it will bite you in the future)
 
   - standard algo : eat the largest cookie first!
 
@@ -71,7 +69,7 @@
 
   2. greedy-choice property
 
-     - eating largest cookie is actually a good thing to do :cookie:
+     - eating largest cookie is actually a good thing to do
      
      - if we keep making locally optimal choices, then will lead to global optimal solution
 
@@ -181,7 +179,7 @@
 
          Thus we can conclude that (T* - e' ∪ e) is actually MST of G (and it includes our edge e!) 
 
-      5. 注意到了嗎 ? we only modified edges crossing cut(S, V-S) :smile:
+      5. 注意到了嗎 ? we only modified edges crossing cut(S, V-S) 
 
          
 
@@ -358,8 +356,6 @@
 - Runtime
 
   - O( sort(E) × E ．α(V) + V )
-  
-  - 待補
 
 - Correctness
 
